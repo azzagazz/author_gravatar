@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension id="author_gravatar" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+    <name>Author Gravatar</name>
+    <description>Adds the logged in users gravatar to the symphony backend page header</description>
+    <types>
+        <type>Interface</type>
+    </types>
+    <repo type="github">https://github.com/azzagazz/author_gravatar</repo>
+    <authors>
+        <author>
+            <name github="azzagazz" symphony="azzagazz">Daniel Golbig</name>
+        </author>
+    </authors>
+    <releases>
+        <release version="1.0" date="2014-04-01" min="2.3" />
+    </releases>
+</extension>

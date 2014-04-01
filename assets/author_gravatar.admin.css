@@ -1,0 +1,14 @@
+#session {
+	margin: -33px 55px 0;
+}
+
+.gravatar {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	z-index: 12;
+	border: 1px solid #e6e6e6;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
