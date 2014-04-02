@@ -30,7 +30,8 @@
 				'href' => SYMPHONY_URL . '/system/authors/edit/' . Administration::instance()->Author->get('id') . '/',
 				'data-id' => Administration::instance()->Author->get('id'),
 				'data-name' => Administration::instance()->Author->get('first_name'),
-				'data-type' => Administration::instance()->Author->get('user_type')
+				'data-type' => Administration::instance()->Author->get('user_type'),
+				'class' => 'gravatar'
 			));
 			
 			// append anchor / gravatar image to backend header element
