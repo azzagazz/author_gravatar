@@ -2,7 +2,13 @@
 	margin: -33px 55px 0;
 }
 
-.gravatar {
+a.gravatar {
+	position: relative;
+	display: block;
+	border: none;
+}
+
+img.gravatar {
 	position: absolute;
 	right: 20px;
 	top: 10px;
