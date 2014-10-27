@@ -15,40 +15,33 @@
 		}
 	
 		public function appendAssets($context) {
+			$author = null;
+			if (is_callable(array('Symphony', 'Author'))) {
+				$author = Symphony::Author();
+			} else {
+				$author = Administration::instance()->Author;
+			}
 
 			// add stylesheet with changes to header
 			Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/author_gravatar/assets/author_gravatar.admin.css', 'screen', 100);
 
 			// create gravatar image
 			$img = new XMLElement('img', null, array(
-				'src' => $this->getGravatar($this->getAuthorEmail(), 30), 
+				'src' => $this->getGravatar($author->get('email'), 30), 
 				'class' => 'gravatar'
 			));
 
 			// create anchor element as parent to the gravatar image
 			$a = new XMLElement('a', $img, array(
 				'href' => SYMPHONY_URL . '/system/authors/edit/' . Administration::instance()->Author->get('id') . '/',
-				'data-id' => Administration::instance()->Author->get('id'),
-				'data-name' => Administration::instance()->Author->get('first_name'),
-				'data-type' => Administration::instance()->Author->get('user_type'),
+				'data-id' => $author->get('id'),
+				'data-name' => $author->get('first_name'),
+				'data-type' => $author->get('user_type'),
 				'class' => 'gravatar'
 			));
 			
 			// append anchor / gravatar image to backend header element
 			Administration::instance()->Page->Header->appendChild($a);
-		}
-
-		/**
-		 * Get the current authors email address
-		 * @return String containing the email address or empty string
-		 */
-		public static function getAuthorEmail() {
-			$author = Administration::instance()->Author;
-			if (isset($author)) { 
-				return $author->get('email'); 
-			} else { 
-				return ''; 
-			}
 		}
 
 		/**
