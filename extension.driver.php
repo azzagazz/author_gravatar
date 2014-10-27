@@ -33,7 +33,7 @@
 
 			// create anchor element as parent to the gravatar image
 			$a = new XMLElement('a', $img, array(
-				'href' => SYMPHONY_URL . '/system/authors/edit/' . Administration::instance()->Author->get('id') . '/',
+				'href' => SYMPHONY_URL . '/system/authors/edit/' . $author->get('id') . '/',
 				'data-id' => $author->get('id'),
 				'data-name' => $author->get('first_name'),
 				'data-type' => $author->get('user_type'),
