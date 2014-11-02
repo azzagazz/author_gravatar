@@ -1,7 +1,7 @@
 # Author Gravatar
 -----------------
 
-Version: 1.1  
+Version: 1.1.1  
 Author: Daniel Golbig (daniel@mediamadness.de)
 
 ## About
