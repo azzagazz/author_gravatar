@@ -3,7 +3,7 @@
 	if(!defined("__IN_SYMPHONY__")) die("<h2>Error</h2><p>You cannot directly access this file</p>");
 
 	Class extension_author_gravatar extends Extension {
-	
+
 		public function getSubscribedDelegates() {
 			return array(
 				array(
@@ -13,7 +13,7 @@
 				)
 			);
 		}
-	
+
 		public function appendAssets($context) {
 			$author = null;
 			if (is_callable(array('Symphony', 'Author'))) {
@@ -27,7 +27,7 @@
 
 			// create gravatar image
 			$img = new XMLElement('img', null, array(
-				'src' => $this->getGravatar($author->get('email'), 30), 
+				'src' => $this->getGravatar($author->get('email'), 30),
 				'class' => 'gravatar'
 			));
 
@@ -39,9 +39,9 @@
 				'data-type' => $author->get('user_type'),
 				'class' => 'gravatar'
 			));
-			
+
 			// append anchor / gravatar image to backend header element
-			Administration::instance()->Page->Header->appendChild($a);
+			Administration::instance()->Page->Session->appendChild($a);
 		}
 
 		/**
@@ -66,5 +66,5 @@
 		    }
 		    return $url;
 		}
-	
+
 	}
