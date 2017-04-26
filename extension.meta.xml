@@ -12,7 +12,7 @@
         </author>
     </authors>
     <releases>
-        <release version="4.0.0" date="2017-04-26" min="4.0.0" max="4.x.x">Update for Symphony 4.x</release>
+        <release version="2.0.0" date="2017-04-26" min="4.0.0" max="4.x.x">Update for Symphony 4.x</release>
         <release version="1.1.2" date="2016-03-06" min="2.3" max="2.x.x">Updated compatibility infos</release>
         <release version="1.1.1" date="2014-10-31" min="2.3" max="2.5.x">protocol-less url</release>
         <release version="1.1" date="2014-10-27" min="2.3" max="2.5.x">update for compatibility with Symphony 2.5</release>
