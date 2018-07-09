@@ -27,7 +27,7 @@
 
 			// create gravatar image
 			$img = new XMLElement('img', null, array(
-				'src' => $this->getGravatar($author->get('email'), 30),
+				'src' => $this->getGravatar($author->get('email'), 40),
 				'class' => 'gravatar'
 			));
 

@@ -4,16 +4,16 @@
 
 a.gravatar {
 	display: block;
-	padding: 0 3rem 1rem;
 }
 
 img.gravatar {
-	border-radius: 100%;
+	border-radius: 5px 0 0 5px;
 	display: block;
 	position: relative;
 	right: 0;
 	top: 0;
-	margin: 0 auto;
-	border: 1px solid #d3dce2;
+	margin: 0;
+	width: 4rem;
+	height: 4rem;
 	z-index: 12;
 }
