@@ -17,3 +17,7 @@ img.gravatar {
 	height: 4rem;
 	z-index: 12;
 }
+
+#session > div {
+	border-radius: 0 5px 5px 0;
+}
